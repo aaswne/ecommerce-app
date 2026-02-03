@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Admin Panel</title>
+</head>
+<body>
+
+    <div id="root">
+        <section class="header">
+            <div class="headerSection">
+                <p class="adminHeading">ShopNow Admin </p>
+                <button id="adminLogout">Logout</button>
+            </div>
+        </section>
+        <section class="productManagement">
+            <div class="addProductsection">
+
+                <form id="addProductForm">
+
+  <label for="productName">
+    Product Name
+    <input
+      type="text"
+      id="productName"
+      class="inputAdmin"
+      placeholder="Product name"
+      required
+    />
+  </label>
+
+  <label for="productPrice">
+    Price
+    <input
+      type="number"
+      id="productPrice"
+      class="inputAdmin"
+      placeholder="Product price"
+      required
+    />
+  </label>
+
+  <label for="productUrl">
+    Product Image URL
+    <input
+      type="text"
+      id="productUrl"
+      class="inputAdmin"
+      placeholder="Image URL"
+    />
+  </label>
+
+  <label for="productDescription">
+    Product Description
+    <input
+      type="text"
+      id="productDescription"
+      class="inputAdmin"
+      placeholder="Product description"
+      maxlength="120"
+    />
+  </label>
+
+  <button type="submit">Add Product</button>
+
+</form>
+
+            </div>
+        </section>
+
+        <section class="productEditdlt">
+
+            <div id="displayitems">
+
+                
+
+                
+
+            </div>
+
+        </section>
+
+        </div>
+    </div>
+    
+</body>
+<script src="/js/admin.js"></script>
+</html>
