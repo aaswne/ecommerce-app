@@ -51,17 +51,16 @@ button.addEventListener("submit", function (i) {
                     </span>`
 
     display.append(div)
-
-    const dltBtn = div.querySelector(".deleteButton")
-
 })
 
-display.addEventListener("click",function(e){
-    if(e.target.classList.contains("deleteButton")){
-        const div = e.target.closest(".items");
+display.addEventListener("click",function(i){
+    if(i.target.classList.contains("deleteButton")){
+        const div = i.target.closest(".items")
         div.remove()
+        const index = Number(div.dataset.index)
+        storeData.splice(index,1)
+        localStorage.setItem("db",JSON.stringify(storeData))
     }
-
 })
 
 
