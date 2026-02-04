@@ -79,7 +79,14 @@ body {
   border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--surface);
+  cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+
 }
+
+#cart:hover{
+box-shadow: 0 10px 22px rgba(17, 24, 39, 0.08);
+  transform: translateY(-1px);}
 
 /* Buttons */
 button {

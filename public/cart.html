@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
     <script defer src="/js/cart.js"></script>
     <title>ShopNow — Cart</title>
   </head>
@@ -26,11 +26,13 @@
       <header class="cartHeader">
         <div>
           <h1 class="cartTitle">Your Cart</h1>
-          <p class="cartSubtitle">Review items and checkout when you’re ready.</p>
+          <div class="spacer"></div>
         </div>
 
         <div class="cartActions">
-          <button class="btnGhost" id="continueShopping">Continue shopping</button>
+          <button class="btnGhost" id="continueShopping">
+            Continue shopping
+          </button>
           <button class="btnDanger" id="clearCart">Clear cart</button>
         </div>
       </header>
@@ -43,14 +45,13 @@
           <div class="emptyState" id="emptyState">
             <div class="emptyIcon">🛒</div>
             <h2 class="emptyTitle">Your cart is empty</h2>
-            <p class="emptyText">Add some products to see them here.</p>
+            <div class="spacer"></div>
             <button class="btnPrimary" id="emptyShopBtn">Shop products</button>
           </div>
 
           <!-- Items list -->
           <div class="itemsList" id="cartList">
             <!-- Example cart item (duplicate with JS) -->
-           
           </div>
         </section>
 
@@ -93,7 +94,11 @@
           <div class="promoCard">
             <h3 class="promoTitle">Have a coupon?</h3>
             <div class="promoRow">
-              <input class="promoInput" id="promoCode" placeholder="Enter code" />
+              <input
+                class="promoInput"
+                id="promoCode"
+                placeholder="Enter code"
+              />
               <button class="btnGhost" id="applyPromo">Apply</button>
             </div>
           </div>

@@ -43,7 +43,7 @@ cart.forEach(element => {
     if (totalPrice > 10000) {
         deliveryCharge = 0;
     } else {
-        deliveryCharge = 50;
+        deliveryCharge = 100;
     }
 
     delivery.innerText = deliveryCharge;
@@ -96,7 +96,14 @@ cart.forEach(element => {
 clearCart.addEventListener("click", function () {
     localStorage.removeItem("cart");  
     display.innerHTML = "";
+    delivery.innerText=0
+    subTottal.innerText=0
+
+
+
 
 })
+
+
 
 

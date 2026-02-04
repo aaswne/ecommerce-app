@@ -5,6 +5,7 @@ const productUrl = document.getElementById("productUrl")
 const productDescription = document.getElementById("productDescription")
 const button = document.getElementById("addProductForm")
 const display = document.getElementById("displayitems")
+const adminLogout = document.getElementById("adminLogout")
 
 
 let storeData = []
@@ -63,6 +64,14 @@ display.addEventListener("click",function(i){
     }
 })
 
+
+adminLogout.addEventListener("click",function(){
+
+    alert("are you sure ")
+          window.location.href="adminlogin.html"
+
+
+})
 
 
 

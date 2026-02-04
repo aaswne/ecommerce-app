@@ -1,5 +1,7 @@
 const storeData = localStorage.getItem("db");
 const display = document.getElementById("productList");
+const loginButton = document.getElementById("loginButton")
+const cart = document.getElementById("cart")
 
 let data = storeData ? JSON.parse(storeData) : [];
 
@@ -32,5 +34,12 @@ display.addEventListener("click", function (e) {
 
   localStorage.setItem("cart", JSON.stringify(cartItems));
 
-  console.log(itemToAdd)
 });
+
+loginButton.addEventListener("click",function(){
+  window.location.href="userlogin.html"
+})
+
+cart.addEventListener("click",function(){
+  window.location.href="cart.html"
+})

@@ -1,23 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Login</title>
-  <link rel="stylesheet" href="/css/login.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <script defer src="/js/auth.js"></script>
+    <title>Admin Login</title>
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <header class="top">
+          <h1 class="brand">ShopNow</h1>
+          <p class="subtitle">Admin Login</p>
+        </header>
 
-  <div class="login-container">
-    <h2>Admin Login</h2>
+        <div class="form" id="adminLoginform">
+          <label class="field">
+            <span>Admin Email</span>
+            <input type="email" id="adminEmail" placeholder="Enter admin email" />
+          </label>
 
-    <input type="text" placeholder="Admin ID" />
-    <input type="password" placeholder="Password" />
+          <label class="field">
+            <span>Admin Password</span>
+            <input
+              type="password"
+              id="adminPassword"
+              placeholder="Enter admin password"
+            />
+          </label>
 
-    <button>Login</button>
+          <label class="field">
+            <span>Admin Key (optional)</span>
+            <input type="text" placeholder="e.g. SHOPNOW-ADMIN-001" />
+          </label>
 
-    <p class="hint">Admin access only</p>
-  </div>
+          <div class="row">
+            <label class="check">
+              <input type="checkbox" />
+              <span>Keep me signed in</span>
+            </label>
 
-</body>
+            <button type="button" class="linkBtn" id="forgotAdmin">
+              Forgot password?
+            </button>
+          </div>
+
+          <button type="button" class="btn" id="buttonLogin">
+            Login as Admin
+          </button>
+
+          <p class="hint">
+            User?
+            <a class="link" href="/public/userlogin.html">Go to user login</a>
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
