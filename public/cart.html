@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script defer src="/js/cart.js"></script>
     <title>ShopNow — Cart</title>
   </head>
 
   <body>
     <div class="root">
-      <!-- Top bar (matches your style) -->
       <section class="navBar">
         <div class="nav">
           <h2 class="heading">ShopNow</h2>
@@ -22,7 +20,6 @@
         </div>
       </section>
 
-      <!-- Page header -->
       <header class="cartHeader">
         <div>
           <h1 class="cartTitle">Your Cart</h1>
@@ -30,18 +27,13 @@
         </div>
 
         <div class="cartActions">
-          <button class="btnGhost" id="continueShopping">
-            Continue shopping
-          </button>
+          <button class="btnGhost" id="continueShopping">Continue shopping</button>
           <button class="btnDanger" id="clearCart">Clear cart</button>
         </div>
       </header>
 
-      <!-- Layout -->
       <main class="cartLayout">
-        <!-- Left: items -->
         <section class="cartItems" aria-label="Cart items">
-          <!-- Empty state (show/hide with JS later) -->
           <div class="emptyState" id="emptyState">
             <div class="emptyIcon">🛒</div>
             <h2 class="emptyTitle">Your cart is empty</h2>
@@ -49,13 +41,9 @@
             <button class="btnPrimary" id="emptyShopBtn">Shop products</button>
           </div>
 
-          <!-- Items list -->
-          <div class="itemsList" id="cartList">
-            <!-- Example cart item (duplicate with JS) -->
-          </div>
+          <div class="itemsList" id="cartList"></div>
         </section>
 
-        <!-- Right: summary -->
         <aside class="cartSummary" aria-label="Order summary">
           <div class="summaryCard">
             <h2 class="summaryTitle">Order Summary</h2>
@@ -82,9 +70,7 @@
               <span id="total">₹0</span>
             </div>
 
-            <button class="btnPrimary checkoutBtn" id="checkoutBtn">
-              Checkout
-            </button>
+            <button class="btnPrimary checkoutBtn" id="checkoutBtn">Checkout</button>
 
             <p class="tinyNote">
               By checking out, you agree to our terms & refund policy.
@@ -94,16 +80,16 @@
           <div class="promoCard">
             <h3 class="promoTitle">Have a coupon?</h3>
             <div class="promoRow">
-              <input
-                class="promoInput"
-                id="promoCode"
-                placeholder="Enter code"
-              />
+              <input class="promoInput" id="promoCode" placeholder="Enter code" />
               <button class="btnGhost" id="applyPromo">Apply</button>
             </div>
+            <p class="tinyNote" id="promoMsg"></p>
           </div>
         </aside>
       </main>
     </div>
+
+    <script src="/js/cart.js"></script>
+    <script src="/js/auth.js"></script>
   </body>
 </html>

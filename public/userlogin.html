@@ -7,6 +7,7 @@
     <script defer src="/js/auth.js"></script>
     <title>User Login</title>
   </head>
+
   <body>
     <main class="page">
       <section class="card">
@@ -18,12 +19,12 @@
         <form class="form" autocomplete="on">
           <label class="field">
             <span>Email</span>
-<input id="emailId" type="email" placeholder="Enter your email" required />
+            <input id="emailId" type="email" placeholder="Enter your email" required />
           </label>
 
           <label class="field">
             <span>Password</span>
-<input id="password" type="password" placeholder="Enter your password" required />
+            <input id="password" type="password" placeholder="Enter your password" required />
           </label>
 
           <div class="row">
@@ -37,14 +38,24 @@
             </button>
           </div>
 
-          <button type="button" id="buttonLogin" class="btn">Login</button >
+          <button type="button" id="buttonLogin" class="btn">Login</button>
 
           <p class="hint">
             Admin?
-            <a class="link" href="/public/adminlogin.html">Go to admin login</a>
+            <a class="link" href="adminlogin.html">Go to admin login</a>
           </p>
         </form>
       </section>
     </main>
+
+    <script>
+      // Optional: simple hint
+      const forgotUser = document.getElementById("forgotUser");
+      if (forgotUser) {
+        forgotUser.addEventListener("click", () => {
+          alert("Demo login\\nemail: ashhwin041@gmail.com\\npass: ashhwin041");
+        });
+      }
+    </script>
   </body>
 </html>

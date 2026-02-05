@@ -7,6 +7,7 @@
     <script defer src="/js/auth.js"></script>
     <title>Admin Login</title>
   </head>
+
   <body>
     <main class="page">
       <section class="card">
@@ -18,16 +19,12 @@
         <div class="form" id="adminLoginform">
           <label class="field">
             <span>Admin Email</span>
-            <input type="email" id="adminEmail" placeholder="Enter admin email" />
+            <input type="email" id="adminEmail" placeholder="Enter admin email" required />
           </label>
 
           <label class="field">
             <span>Admin Password</span>
-            <input
-              type="password"
-              id="adminPassword"
-              placeholder="Enter admin password"
-            />
+            <input type="password" id="adminPassword" placeholder="Enter admin password" required />
           </label>
 
           <label class="field">
@@ -52,7 +49,7 @@
 
           <p class="hint">
             User?
-            <a class="link" href="/public/userlogin.html">Go to user login</a>
+            <a class="link" href="userlogin.html">Go to user login</a>
           </p>
         </div>
       </section>
