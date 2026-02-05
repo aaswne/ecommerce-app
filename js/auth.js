@@ -3,10 +3,12 @@ const userEmail = document.getElementById("emailId");
 const userPass = document.getElementById("password");
 const loginIndex = document.getElementById("loginButton")
 
-const adminLogin = document.getElementById("buttonLogin")
+const adminLogin = document.getElementById("buttonLogi")
 const adminEmail = document.getElementById("adminEmail")
 const adminPass = document.getElementById("adminPassword")
 const forgotAdmin = document.getElementById("forgotAdmin")
+
+let isLogin = false
 
 button.addEventListener("click", function (e) {
     e.preventDefault();
@@ -19,12 +21,22 @@ button.addEventListener("click", function (e) {
         email == "ashhwin041@gmail.com" &&
         pass == "ashhwin041"
     ) {
+         isLogin = true
         window.location.href = "index.html";
     } else {
+         isLogin=false
         alert("EMAIL OR PASSWORD IS WRONG");
     }
 
 });
+
+if(isLogin){
+    isLogin===true;
+    button.innerText = "Login";
+}
+
+
+
 
 
 adminLogin.addEventListener("click", function () {
@@ -33,7 +45,7 @@ adminLogin.addEventListener("click", function () {
     const aPass = adminPass.value.trim()
 
     if (aEmail.innertext === "") {
-        alert("enter balied email")
+        alert("enter valied email")
     }
 
     if (
